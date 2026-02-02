@@ -13,7 +13,7 @@ from src.database import Base
 
 
 class Patient(Base):
-    __tablename__ = "sivapriya_patients"
+    __tablename__ = "patients"
 
     id = Column(Integer, primary_key=True, index=True)
     first_name = Column(String(50), nullable=False)
@@ -27,7 +27,7 @@ class Patient(Base):
 
 
 class Doctor(Base):
-    __tablename__ = "varshinivangeti_doctors"
+    __tablename__ = "doctors"
 
     id = Column(Integer, primary_key=True, index=True)
     full_name = Column(String(100), nullable=False)
@@ -39,11 +39,11 @@ class Doctor(Base):
 
 
 class Appointment(Base):
-    __tablename__ = "varshinivangeti_appointments"
+    __tablename__ = "appointments"
 
     id = Column(Integer, primary_key=True, index=True)
-    patient_id = Column(Integer, ForeignKey("varshinivangeti_patients.id"), nullable=False)
-    doctor_id = Column(Integer, ForeignKey("varshinivangeti_doctors.id"), nullable=False)
+    patient_id = Column(Integer, ForeignKey("patients.id"), nullable=False)
+    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=False)
     start_time = Column(DateTime(timezone=True), nullable=False, index=True)
     duration_minutes = Column(Integer, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
