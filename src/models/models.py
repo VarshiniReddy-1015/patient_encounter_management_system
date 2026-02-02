@@ -27,7 +27,7 @@ class Patient(Base):
 
 
 class Doctor(Base):
-    __tablename__ = "sivapriya_doctors"
+    __tablename__ = "varshinivangeti_doctors"
 
     id = Column(Integer, primary_key=True, index=True)
     full_name = Column(String(100), nullable=False)
@@ -39,11 +39,11 @@ class Doctor(Base):
 
 
 class Appointment(Base):
-    __tablename__ = "sivapriya_appointments"
+    __tablename__ = "varshinivangeti_appointments"
 
     id = Column(Integer, primary_key=True, index=True)
-    patient_id = Column(Integer, ForeignKey("sivapriya_patients.id"), nullable=False)
-    doctor_id = Column(Integer, ForeignKey("sivapriya_doctors.id"), nullable=False)
+    patient_id = Column(Integer, ForeignKey("varshinivangeti_patients.id"), nullable=False)
+    doctor_id = Column(Integer, ForeignKey("varshinivangeti_doctors.id"), nullable=False)
     start_time = Column(DateTime(timezone=True), nullable=False, index=True)
     duration_minutes = Column(Integer, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())

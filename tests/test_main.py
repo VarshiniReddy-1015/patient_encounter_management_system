@@ -17,10 +17,10 @@ def setup_db():
 
 def test_create_patient_success():
     payload = {
-        "first_name": "Siva",
-        "last_name": "Priya",
+        "first_name": "Varshini",
+        "last_name": "Vangeti",
         "email": f"test_{datetime.now().timestamp()}@example.com",
-        "phone_number": "9876543210",
+        "phone_number": "9392659722",
     }
     response = client.post("/patients", json=payload)
     assert response.status_code == 201

@@ -11,11 +11,11 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # Naming convention for tables
 metadata = MetaData(
     naming_convention={
-        "ix": "ix_sivapriya_%(column_0_label)s",
-        "uq": "uq_sivapriya_%(table_name)s_%(column_0_name)s",
-        "ck": "ck_sivapriya_%(table_name)s_%(constraint_name)s",
-        "fk": "fk_sivapriya_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
-        "pk": "pk_sivapriya_%(table_name)s",
+        "ix": "ix_varshinivangeti_%(column_0_label)s",
+        "uq": "uq_varshinivangeti_%(table_name)s_%(column_0_name)s",
+        "ck": "ck_varshinivangeti_%(table_name)s_%(constraint_name)s",
+        "fk": "fk_varshinivangeti_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
+        "pk": "pk_varshinivangeti_%(table_name)s",
     }
 )
 
